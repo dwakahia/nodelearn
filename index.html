@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Api testing</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto+Condensed:ital,wght@1,300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+
+    html, body {
+        height: 100%;
+    }
+
+    .container {
+        width: 50%;
+        margin: 50px auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .end_point_title {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .http_verb {
+        color: #0000ff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .end_point_url{
+        font-size: 20px;
+        font-style: italic;
+        margin-left: 20px;
+    }
+
+    .title{
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>
+<body>
+<div class="container">
+    <h1>Test Api</h1>
+    <div>
+        <p class="end_point_title">Get users</p>
+        <p><span class="http_verb">get</span> <span class="end_point_url">{base_url}/users</span></p>
+    </div>
+    <div>
+        <p class="end_point_title">Create user</p>
+        <p><span class="http_verb">post</span> <span class="end_point_url">{base_url}/users/create</span></p>
+        <p class="title">Expected JSON input</p>
+        <code>
+            {
+            "name":"dennis fsdfsd",
+            "email":"dwakahia@cytonn.com",
+            "phone": 799566927,
+            "age": 67
+
+            }
+        </code>
+    </div>
+    <div>
+        <p class="end_point_title">Get user by id</p>
+        <p><span class="http_verb">get</span> <span class="end_point_url">{base_url}/users/{userId}</span></p>
+    </div>
+    <div>
+        <p class="end_point_title">Update user</p>
+        <p><span class="http_verb">put</span> <span class="end_point_url">{base_url}/users/update/{userId}</span></p>
+        <p class="title">Expected JSON input</p>
+        <code>
+            {
+            "name":"dennis fsdfsd",
+            "email":"dwakahia@cytonn.com",
+            "phone": 799566927,
+            "age": 67
+            }
+        </code>
+    </div>
+    <div>
+        <p class="end_point_title">Delete user </p>
+        <p><span class="http_verb">delete</span> <span class="end_point_url">{base_url}/users/delete/{userId}</span></p>
+    </div>
+</div>
+</body>
+</html>
